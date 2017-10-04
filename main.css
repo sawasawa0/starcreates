@@ -1,5 +1,8 @@
 @charset "UTF-8";
+/* PRECSS */
 
+
+/* 要素 */
 body {
     font-size: 16px;
     text-align: center;
@@ -38,11 +41,14 @@ header {
 }
 
 .ly_header {
-    background-color: #333;
-    opacity: 0.9;
-}
+        margin: -110px auto;
+        margin-bottom: 0px;
+        width: 100%;
+        position: fixed;
+    }
+
 .ly_body {
-    margin-top: 30px;
+    margin-top: 110px;
 }
 .ly_footer {
     background-color: #333;
@@ -50,16 +56,23 @@ header {
     padding: 10px;
 }
 
-.bl_logo {
+.ly_logo {
+    height: 60px;
+    background-color: rgba(248, 248, 248, 0.9);
+}
 
+.ly_logo img {
+    height: 40px;
+    margin-top: 10px;
 }
 
 .bl_section {
     margin: 20px;
-    margin-top: -60px; /* 固定ナビの高さ分のネガティブマージン */
-    padding-top: 60px; /* 打ち消し用のパディング */
-    min-height: 600px;
+    margin-top: -110px; /* 固定ナビの高さ分のネガティブマージン */
+    padding-top: 110px; /* 打ち消し用のパディング */
+    min-height: 400px;
 }
+
 .bl_mainvisual{
     width: 100%;
 	padding: 0;
@@ -86,6 +99,16 @@ header {
 .bl_section_ttl {
     text-align: left;
 }
+
+h2.bl_section_ttl {
+    background-image: url(img/logo.svg);
+    background-repeat: no-repeat;
+    height: 40px;
+    padding: 0.4em;
+    padding-left: 55px;
+
+}
+
 .bl_section_txt {
     text-align: left;
 }
@@ -126,11 +149,8 @@ header {
 
 }
 
-
-
-
 /* トップに戻るボタン */
-.back-to-top {
+.bl-btn-BackToTop {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -152,7 +172,30 @@ header {
 }
 
 /* マウスを乗せた時に透明度を変える */
-.back-to-top:hover {
+.bl-btn-BackToTop:hover {
     opacity: 0.9;
     color: #ffffff;
+}
+
+
+/* bootstrap */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #ff6666;
+    transition: 0.4s;
+}
+
+ul.navbar-nav li:hover {
+    background-color: #ffcccc;
+    transition: 0.4s;
+}
+
+
+.navbar-default {
+    background-color: rgba(248, 248, 248, 0.9);
+}
+
+/* id要素（一時的にブロックごと非表示にする要素） */
+#charge{
+    display: none;
 }

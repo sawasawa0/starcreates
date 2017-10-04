@@ -17,10 +17,10 @@ $("#navbar a").click(function() {
 function updateButton() {
     if ($(this).scrollTop() >= 300) { // 300px以上スクロールされた
         // ボタンを表示
-        $(".back-to-top").fadeIn();
+        $(".bl-btn-BackToTop").fadeIn();
     } else {
         // ボタンを非表示
-        $(".back-to-top").fadeOut();
+        $(".bl-btn-BackToTop").fadeOut();
     }
 }
 
@@ -31,7 +31,7 @@ $(document).ready(function() {
     $(window).scroll(updateButton);
 
     // ボタンをクリックしたらページトップにスクロールする
-    $(".back-to-top").click(function() {
+    $(".bl-btn-BackToTop").click(function() {
         // 600ミリ秒かけてトップに戻る
         $("html, body").animate({
             scrollTop: 0,
