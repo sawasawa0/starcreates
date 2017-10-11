@@ -24,7 +24,7 @@
         <div class="ly_logo" style="top:0px;">
             <a href="#"><img src="img/logo_text_01.png"></a>
         </div>
-        <nav class="navbar navbar-default navbar-fixed-top" style="top:60px;">
+        <nav class="navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <!-- ハンバーガーボタン -->
@@ -37,11 +37,11 @@
                 <!-- メニュー項目 -->
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#top">top</a></li>
+                        <li class="active"><a href="#">top</a></li>
                         <li><a href="#about">スタークリエイツについて</a></li>
                         <li><a href="#work">制作実績</a></li>
                         <li><a href="#flow">制作フロー</a></li>
-                        <!-- <li><a href="#charge">料金</a></li> -->
+                        <li><a href="#charge">料金</a></li>
                         <li><a href="#contact">お問い合わせ</a></li>
                     </ul>
                 </div>
@@ -53,75 +53,84 @@
 
     <div class="ly_body">
         <div id="top" class="bl_mainvisual cf">
-                <img class="bl_mainvisual_img" src="http://placehold.jp/1920x750.png">
-                <p class="bl_mainvisual_txt"><span class="el_txt_red">「IT×マンガ」</span>でビジネスの生産性を向上させます。</p>
+                <img class="bl_mainvisual_img" src="img/mainvisual.png">
         </div>
-        <div id="about" class="bl_section row cf">
-            <p class="bl_section_txt bl_section_txt__lrg"><span class="el_txt_pink">Q.</span> こんなことで困っていませんか？</p>
-            <ul class="bl_section_img cf">
-                <li class="bl_section_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
-                <li class="bl_section_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
-                <li class="bl_section_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
+        <!-- SNSボタン　-->
+        <div id="sns" class="bl_snsBtn">
+            <!-- twitter -->
+            <div class="el_btn__sns"><a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true" data-url="http://starcreates.me">Tweet</a></div>
+            <!-- facebook-->
+            <div class="el_btn__sns"><div class="fb-like" data-href="http://starcreates.me" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></div>
+            <!-- はてなブックマーク -->
+            <div class="el_btn__sns"><a href="http://b.hatena.ne.jp/entry/http://starcreates.me" class="hatena-bookmark-button" data-hatena-bookmark-title="スタークリエイツ｜「IT×マンガ」でビジネスの生産性を向上させます" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></div>
+        </div>
+
+        <div id="about" class="bl_sect row cf">
+            <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">Q.</span> こんなことで困っていませんか？</p>
+            <ul class="bl_sect_img cf">
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
             </ul>
         </div>
-        <div class="bl_section cf">
-            <p class="bl_section_txt bl_section_txt__lrg"><span class="el_txt_blue">A.</span> その問題<span class="el_txt_pink">「IT×マンガ」</span>の力で解決します。</p>
-            <ul class="bl_section_img  cf">
-                <li class="bl_section_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
-                <li class="bl_section_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
-                <li class="bl_section_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+        <div class="bl_sect cf">
+            <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__blue">A.</span> その問題<span class="el_txt__pink">「IT×マンガ」</span>の力で解決します。</p>
+            <ul class="bl_sect_img  cf">
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
             </ul>
         </div>
 
-        <div id="work" class="bl_section cf">
-            <h2 class="bl_section_ttl">制作実績</h2>
-            <ul class="bl_section_img cf">
-                <li class="bl_section_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
-                <li class="bl_section_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
-                <li class="bl_section_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+        <div id="work" class="bl_sect cf">
+            <h2 class="bl_sect_ttl">制作実績</h2>
+            <ul class="bl_sect_img cf">
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
             </ul>
-            <p class="bl_section_txt bl_section_txt__lrg"><span class="el_txt_orange">こんなお仕事</span>はお任せください</p>
+            <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">こんなお仕事</span>はお任せください</p>
         </div>
 
-        <div id="flow" class="bl_section cf">
-            <h2 class="bl_section_ttl">制作フロー</h2>
+        <div id="flow" class="bl_sect cf">
+            <h2 class="bl_sect_ttl">制作フロー（マンガ広告作成時の一例）</h2>
         </div>
-        <div id="charge" class="bl_section cf">
-            <h2 class="bl_section_ttl">料金</h2>
-            <table class="table table-bordered bl_section_table">
-                <thead class="bl_section_thead">
-                    <th class="bl_section_th">業務システム開発</th>
-                    <th class="bl_section_th">webページ制作</th>
-                    <th class="bl_section_th">マニュアル制作</th>
-                    <th class="bl_section_th">マンガ・イラスト制作</th>
+        <div id="charge" class="bl_sect cf">
+            <h2 class="bl_sect_ttl">料金（料金表から一部抜粋）</h2>
+            <table class="table table-bordered bl_sect_table">
+                <thead class="bl_sect_thead">
+                    <th class="bl_sect_th">業務システム開発</th>
+                    <th class="bl_sect_th">webページ制作</th>
+                    <th class="bl_sect_th">マニュアル制作</th>
+                    <th class="bl_sect_th">マンガ・イラスト制作</th>
                 </thead>
-                <tbody class="bl_section_tbody">
-                    <tr class="bl_section_tr">
-                        <td class="bl_section_td"></td>
-                        <td class="bl_section_td"></td>
-                        <td class="bl_section_td"></td>
-                        <td class="bl_section_td"></td>
+                <tbody class="bl_sect_tbody">
+                    <tr class="bl_sect_tr">
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
                     </tr>
-                    <tr class="bl_section_tr">
-                        <td class="bl_section_td"></td>
-                        <td class="bl_section_td"></td>
-                        <td class="bl_section_td"></td>
-                        <td class="bl_section_td"></td>
+                    <tr class="bl_sect_tr">
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
                     </tr>
-                    <tr class="bl_section_tr">
-                        <td class="bl_section_td"></td>
-                        <td class="bl_section_td"></td>
-                        <td class="bl_section_td"></td>
-                        <td class="bl_section_td"></td>
+                    <tr class="bl_sect_tr">
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
                     </tr>
                 </tbody>
             </table>
-            <p class="bl_section_txt bl_section_txt__lrg"><span class="el_txt_orange">明朗会計</span>で安心してご利用いただけます。</p>
-            <p class="bl_section_txt">詳細はこちらから</p>
+            <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">明朗会計</span>で安心してご利用いただけます。</p>
+            <p class="bl_sect_txt">詳細はこちらから</p>
         </div>
-        <div id="contact" class="bl_section cf">
-            <h2 class="bl_section_ttl">お問い合わせ・お仕事依頼</h2>
-            <p class="bl_section_txt">お問い合わせ・お仕事依頼は下記のフォームからどうぞ</p>
+        <div id="contact" class="bl_sect cf">
+            <h2 class="bl_sect_ttl">お問い合わせ・お仕事依頼</h2>
+            <p class="bl_sect_txt">お問い合わせ・お仕事依頼は下記のフォームからどうぞ</p>
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFhJf9HFlaPkXE6W15EzKVE_sDp9qJsTWcMGD95q2zl0SAng/viewform?embedded=true" width="100%" height="1320" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
         </div>
         <!-- トップに戻るボタン -->
@@ -137,6 +146,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- twitter -->
+    <script>
+    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+    </script>
+    <!-- facebook -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+        	var js, fjs = d.getElementsByTagName(s)[0];
+        	if (d.getElementById(id)) return;
+        	js = d.createElement(s); js.id = id;
+        	js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+        	fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- はてなブックマーク -->
+    <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async">
+        {lang: "ja"}
+    </script>
+
+
     <script src="main.js"></script>
   </body>
 </html>
