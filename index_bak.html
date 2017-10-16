@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+
+<!--
+  Theme: Tumblr Boilerplate
+  by @sanographix
+  http://www.sanographix.net
+  (c) 2014 Showkaku Sano
+  Free to use under the MIT license.
+-->
+
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <!-- Variables -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+
+  <meta name="text:Google Author" content="" />
+  <meta name="if:Enable Like Button" content="1" />
+  <meta name="if:Enable Tweet Button" content="1" />
+  <meta name="if:Enable Plus1 Button" content="1" />
+
+
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <link rel="apple-touch-icon" href="{PortraitURL-128}">
+  <link rel="canonical" href="{Permalink}"/>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+  <!-- OGP -->
+  <meta property="og:title" content="{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="{PortraitURL-128}" />
+
+  <!-- Twitter tags -->
+  <meta name="twitter:image" content="{PortraitURL-128}" />
+
+   <!-- photo だったら og-image は photoURL にする -->
+  {block:PermalinkPage}
+    {block:Posts}
+      {block:Photo}
+        <meta property="og:image" content="{PhotoURL-HighRes}" />
+      {/block:Photo}
+      {block:Photoset}
+        {block:Photos}
+        <meta property="og:image" content="{PhotoURL-HighRes}" />
+        {/block:Photos}
+      {/block:Photoset}
+    {/block:Posts}
+  {/block:PermalinkPage}
+  <meta property="og:site_name" content="{Title}" />
+  {block:Description}
+    <meta property="og:description" content="{MetaDescription}">
+  {/block:Description}
+  {block:IfGoogleAuthor}
+    <link rel="author" href="{text:Google Author}" />
+  {/block:IfGoogleAuthor}
+  {block:IndexPage}
+    <link rel="canonical" href="{BlogURL}"/>
+    <meta property="og:url" content="{BlogURL}" />
+  {/block:IndexPage}
+  {block:PermalinkPage}
+    <link rel="canonical" href="{Permalink}"/>
+    <meta property="og:url" content="{Permalink}" />
+  {/block:PermalinkPage}
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body data-spy="scroll" data-target="#navbar" class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink page-{PostID}{/block:PermalinkPage}">
+
+  <style>
+  {CustomCSS}
+  </style>
+
+  <div id="container">
+
+      <div class="ly_logo" style="top:0px;">
+          <a href="#" class="js_BackToTop"><img src="img/logo_text_01.png"></a>
+      </div>
+      <nav class="navbar-default">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <!-- ハンバーガーボタン -->
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+              </div>
+              <!-- メニュー項目 -->
+              <div id="navbar" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                      <li class="active"><a href="#" class="js_BackToTop">top</a></li>
+                      <li><a href="#about" class="js_inPageLink">スタークリエイツについて</a></li>
+                      <li><a href="#work" class="js_inPageLink">制作実績</a></li>
+                      <li><a href="#flow" class="js_inPageLink">制作フロー</a></li>
+                      <li><a href="#charge" class="js_inPageLink">料金</a></li>
+                      <li><a href="#contact" class="js_inPageLink">お問い合わせ</a></li>
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+      </nav>
+  </header>
+
+  <div class="ly_body">
+      <div id="top" class="bl_mainvisual cf">
+              <img class="bl_mainvisual_img" src="img/mainvisual.png">
+      </div>
+      <!-- SNSボタン　-->
+      <div id="sns" class="bl_snsBtn">
+          <!-- twitter -->
+          <div class="el_btn__sns"><a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true" data-url="http://starcreates.me">Tweet</a></div>
+          <!-- facebook-->
+          <div class="el_btn__sns"><div class="fb-like" data-href="http://starcreates.me" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></div>
+          <!-- はてなブックマーク -->
+          <div class="el_btn__sns"><a href="http://b.hatena.ne.jp/entry/http://starcreates.me" class="hatena-bookmark-button" data-hatena-bookmark-title="スタークリエイツ｜「IT×マンガ」でビジネスの生産性を向上させます" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></div>
+      </div>
+
+      <div id="about" class="bl_sect row cf">
+          <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">Q.</span> こんなことで困っていませんか？</p>
+          <ul class="bl_sect_img cf">
+              <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
+              <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
+              <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
+          </ul>
+      </div>
+      <div class="bl_sect cf">
+          <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__blue">A.</span> その問題<span class="el_txt__pink">「IT×マンガ」</span>の力で解決します。</p>
+          <ul class="bl_sect_img  cf">
+              <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+              <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+              <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+          </ul>
+      </div>
+
+      <div id="work" class="bl_sect cf">
+          <h2 class="bl_sect_ttl">制作実績</h2>
+          <ul class="bl_sect_img cf">
+              <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+              <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+              <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+          </ul>
+          <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">こんなお仕事</span>はお任せください</p>
+      </div>
+
+      <div id="flow" class="bl_sect cf">
+          <h2 class="bl_sect_ttl">制作フロー（マンガ広告作成時の一例）</h2>
+      </div>
+      <div id="charge" class="bl_sect cf">
+          <h2 class="bl_sect_ttl">料金（料金表から一部抜粋）</h2>
+          <table class="table table-bordered bl_sect_table">
+              <thead class="bl_sect_thead">
+                  <th class="bl_sect_th">業務システム開発</th>
+                  <th class="bl_sect_th">webページ制作</th>
+                  <th class="bl_sect_th">マニュアル制作</th>
+                  <th class="bl_sect_th">マンガ・イラスト制作</th>
+              </thead>
+              <tbody class="bl_sect_tbody">
+                  <tr class="bl_sect_tr">
+                      <td class="bl_sect_td"></td>
+                      <td class="bl_sect_td"></td>
+                      <td class="bl_sect_td"></td>
+                      <td class="bl_sect_td"></td>
+                  </tr>
+                  <tr class="bl_sect_tr">
+                      <td class="bl_sect_td"></td>
+                      <td class="bl_sect_td"></td>
+                      <td class="bl_sect_td"></td>
+                      <td class="bl_sect_td"></td>
+                  </tr>
+                  <tr class="bl_sect_tr">
+                      <td class="bl_sect_td"></td>
+                      <td class="bl_sect_td"></td>
+                      <td class="bl_sect_td"></td>
+                      <td class="bl_sect_td"></td>
+                  </tr>
+              </tbody>
+          </table>
+          <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">明朗会計</span>で安心してご利用いただけます。</p>
+          <p class="bl_sect_txt">詳細はこちらから</p>
+      </div>
+      <div id="contact" class="bl_sect cf">
+          <h2 class="bl_sect_ttl">お問い合わせ・お仕事依頼</h2>
+          <p class="bl_sect_txt">お問い合わせ・お仕事依頼は下記のフォームからどうぞ</p>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFhJf9HFlaPkXE6W15EzKVE_sDp9qJsTWcMGD95q2zl0SAng/viewform?embedded=true" width="100%" height="1320" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
+      </div>
+      <!-- トップに戻るボタン -->
+      <a href="#" class="bl_btn_BackToTop js_BackToTop">∧</a>
+
+  </div>
+
+
+    <div id="main" class="autopagerize_page_element" role="main">
+      {block:TagPage}
+        <h2 class="tagged">Posts tagged "{Tag}"</h2>
+      {/block:TagPage}
+
+      <!-- 投稿 -->
+      {block:Posts}
+        <article class="post {TagsAsClasses} {PostType}">
+
+          {block:Date}
+          <div class="date">
+            <a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a>
+          </div>
+          {/block:Date}
+
+          <!-- post: テキスト -->
+          {block:Text}
+            <header class="entry-header">
+              {block:Title}
+                <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+              {/block:Title}
+            </header>
+            <div class="entry-content">
+              {Body}
+            </div>
+          {/block:Text}
+
+          <!-- post: 画像 -->
+          {block:Photo}
+            <div class="entry-content">
+              {LinkOpenTag}
+                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+              {LinkCloseTag}
+              {block:Caption}
+                <div class="caption">
+                  {Caption}
+                </div>
+              {/block:Caption}
+            </div>
+          {/block:Photo}
+
+          <!-- post: フォトセット -->
+          {block:Photoset}
+              <div class="entry-content">
+                {Photoset-700}
+                {block:Caption}
+                  <div class="caption">
+                    {Caption}
+                  </div>
+                {/block:Caption}
+              </div>
+          {/block:Photoset}
+
+          <!-- post: 引用 -->
+          {block:Quote}
+            <div class="entry-content {Length}">
+              <blockquote>“{Quote}”</blockquote>
+              {block:Source}
+                <div class="quote-source">
+                  {Source}
+                </div>
+              {/block:Source}
+            </div>
+          {/block:Quote}
+
+          <!-- post: リンク -->
+          {block:Link}
+            <header class="entry-header">
+              <h1 class="entry-title">
+                <a href="{URL}" class="link-url" {Target}>{Name}</a>
+              </h1>
+            </header>
+            <div class="entry-content">
+                {block:Description}
+                  <div class="link-description">{Description}</div>
+                {/block:Description}
+            </div>
+          {/block:Link}
+
+          <!-- post: チャット -->
+          {block:Chat}
+            <div class="entry-content">
+              {block:Title}
+                <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+              {/block:Title}
+              <ul class="ul-chat">
+                {block:Lines}
+                <li class="{Alt} user_{UserNumber}">
+                {block:Label}
+                <span class="label">{Label}</span>
+                {/block:Label}
+                {Line}
+                </li>
+                {/block:Lines}
+              </ul>
+            </div>
+          {/block:Chat}
+
+          <!-- post: ビデオ -->
+          {block:Video}
+            <div class="entry-content video-iframe">
+              {Video-700}
+              {block:Caption}
+                <div class="caption">
+                  {Caption}
+                </div>
+              {/block:Caption}
+            </div>
+          {/block:Video}
+
+          <!-- post: オーディオ -->
+          {block:Audio}
+            <div class="entry-content">
+              {AudioPlayerBlack}
+              {block:Caption}
+                <div class="caption">
+                  {Caption}
+                </div>
+              {/block:Caption}
+            </div>
+          {/block:Audio}
+
+          <!-- post: Answer -->
+          {block:Answer}
+            <div class="entry-content">
+              <div class="question bubble">
+                {Question}
+              </div>
+              <div class="asker-group">
+                <img src="{AskerPortraitURL-24}" width="24" height="24" /> {Asker}
+              </div>
+              <div class="answer cont">{Answer}</div>
+            </div>
+          {/block:Answer}
+
+          <!-- Content Source -->
+          {block:ContentSource}
+            <div class="content-source">
+              <a href="{SourceURL}">
+                {lang:Source}:
+                {block:SourceLogo}
+                  <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                {/block:SourceLogo}
+                {block:NoSourceLogo}
+                    {SourceTitle}
+                {/block:NoSourceLogo}
+              </a>
+            </div>
+          {/block:ContentSource}
+
+          <!-- 記事フッタ -->
+          <footer class="entry-footer">
+
+            {block:RebloggedFrom}
+              <div class="rebloggedfrom">
+                <span class="meta-elements reblog-parent-name">
+                  Reblogged from <a href="{ReblogParentURL}"><img
+src="{ReblogParentPortraitURL-16}" class="favicon"/> {ReblogParentName}</a>
+                </span>
+                <span class="meta-elements reblog-root-name">
+                  Originally posted by <a href="{ReblogRootURL}"><img
+src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
+                </span>
+              </div>
+            {/block:RebloggedFrom}
+
+            <div class="meta meta-footer">
+
+              <span class="meta-elements timeago">
+                <a href="{Permalink}">{TimeAgo}</a>
+              </span>
+
+              {block:NoteCount}
+                <span class="meta-elements notecount">
+                  <a href="{Permalink}">{NoteCount} Notes</a>
+                </span>
+              {/block:NoteCount}
+
+              {block:HasTags}
+                <span class="meta-elements hastags">
+                  {block:Tags}
+                    <a href="{TagURL}">#{Tag}</a>
+                  {/block:Tags}
+                </span>
+              {/block:HasTags}
+
+            </div>
+
+            {block:Date}
+              <div class="tumblr-controls">
+                <ul class="like-and-reblog-buttons">
+                  <li>{ReblogButton}</li>
+                  <li>{LikeButton}</li>
+                </ul>
+              </div>
+            {/block:Date}
+
+            <!-- パーマリンクだけソーシャルボタン出す -->
+            {block:PermalinkPage}
+
+
+            {/block:PermalinkPage}
+
+            {block:PostNotes}
+              <h3 class="notecount-header">{NoteCount} Notes</h3>
+              <div class="notecontainer">{PostNotes}</div>
+            {/block:PostNotes}
+          </footer>
+
+        </article>
+
+      {/block:Posts}
+
+    </div>
+
+    <!-- パーマリンクのページャ -->
+    {block:PermalinkPagination}
+      <div class="pagenation pagenation-permalink">
+        {block:NextPost}
+          <a href="{NextPost}" class="next" rel="next">Newer Post</a>
+        {/block:NextPost}
+        {block:PreviousPost}
+          <a href="{PreviousPost}">Older Post</a>
+        {/block:PreviousPost}
+      </div>
+    {/block:PermalinkPagination}
+
+    <!-- ページごとのページャ -->
+    {block:Pagination}
+      <div class="pagenation pagenation-index">
+        {block:PreviousPage}
+          <a href="{PreviousPage}">Prev</a>
+        {/block:PreviousPage}
+        {block:JumpPagination length="5"}
+          {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
+          {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
+        {/block:JumpPagination}
+        {block:NextPage}
+          <a href="{NextPage}" class="next" rel="next">Next</a>
+        {/block:NextPage}
+      </div>
+    {/block:Pagination}
+
+    <footer class="ly_footer">
+        <div class="bl_copy"><p>&copy; {CopyrightYears} StarCreates</p></div>
+    </footer>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+  {block:IfEnableLikeButton}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  {/block:IfEnableLikeButton}
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>スタークリエイツ｜「IT×マンガ」でビジネスの生産性を向上させます</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+    <body data-spy="scroll" data-target="#navbar">
+    <header class="ly_header">
+        <div class="ly_logo" style="top:0px;">
+            <a href="#" class="js_BackToTop"><img src="img/logo_text_01.png"></a>
+        </div>
+        <nav class="navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!-- ハンバーガーボタン -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- メニュー項目 -->
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#" class="js_BackToTop">top</a></li>
+                        <li><a href="#about" class="js_inPageLink">スタークリエイツについて</a></li>
+                        <li><a href="#work" class="js_inPageLink">制作実績</a></li>
+                        <li><a href="#flow" class="js_inPageLink">制作フロー</a></li>
+                        <li><a href="#charge" class="js_inPageLink">料金</a></li>
+                        <li><a href="#contact" class="js_inPageLink">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+
+    <div class="ly_body">
+        <div id="top" class="bl_mainvisual cf">
+                <img class="bl_mainvisual_img" src="img/mainvisual.png">
+        </div>
+        <!-- SNSボタン　-->
+        <div id="sns" class="bl_snsBtn">
+            <!-- twitter -->
+            <div class="el_btn__sns"><a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true" data-url="http://starcreates.me">Tweet</a></div>
+            <!-- facebook-->
+            <div class="el_btn__sns"><div class="fb-like" data-href="http://starcreates.me" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></div>
+            <!-- はてなブックマーク -->
+            <div class="el_btn__sns"><a href="http://b.hatena.ne.jp/entry/http://starcreates.me" class="hatena-bookmark-button" data-hatena-bookmark-title="スタークリエイツ｜「IT×マンガ」でビジネスの生産性を向上させます" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></div>
+        </div>
+
+        <div id="about" class="bl_sect row cf">
+            <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">Q.</span> こんなことで困っていませんか？</p>
+            <ul class="bl_sect_img cf">
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="bl_sect cf">
+            <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__blue">A.</span> その問題<span class="el_txt__pink">「IT×マンガ」</span>の力で解決します。</p>
+            <ul class="bl_sect_img  cf">
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+            </ul>
+        </div>
+
+        <div id="work" class="bl_sect cf">
+            <h2 class="bl_sect_ttl">制作実績</h2>
+            <ul class="bl_sect_img cf">
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+                <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
+            </ul>
+            <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">こんなお仕事</span>はお任せください</p>
+        </div>
+
+        <div id="flow" class="bl_sect cf">
+            <h2 class="bl_sect_ttl">制作フロー（マンガ広告作成時の一例）</h2>
+        </div>
+        <div id="charge" class="bl_sect cf">
+            <h2 class="bl_sect_ttl">料金（料金表から一部抜粋）</h2>
+            <table class="table table-bordered bl_sect_table">
+                <thead class="bl_sect_thead">
+                    <th class="bl_sect_th">業務システム開発</th>
+                    <th class="bl_sect_th">webページ制作</th>
+                    <th class="bl_sect_th">マニュアル制作</th>
+                    <th class="bl_sect_th">マンガ・イラスト制作</th>
+                </thead>
+                <tbody class="bl_sect_tbody">
+                    <tr class="bl_sect_tr">
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                    </tr>
+                    <tr class="bl_sect_tr">
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                    </tr>
+                    <tr class="bl_sect_tr">
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                        <td class="bl_sect_td"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">明朗会計</span>で安心してご利用いただけます。</p>
+            <p class="bl_sect_txt">詳細はこちらから</p>
+        </div>
+        <div id="contact" class="bl_sect cf">
+            <h2 class="bl_sect_ttl">お問い合わせ・お仕事依頼</h2>
+            <p class="bl_sect_txt">お問い合わせ・お仕事依頼は下記のフォームからどうぞ</p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFhJf9HFlaPkXE6W15EzKVE_sDp9qJsTWcMGD95q2zl0SAng/viewform?embedded=true" width="100%" height="1320" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
+        </div>
+        <!-- トップに戻るボタン -->
+        <a href="#" class="bl_btn_BackToTop js_BackToTop">∧</a>
+
+    </div>
+
+    <footer class="ly_footer">
+        <div class="bl_copy"><p>&copy; 2017 StarCreates</p></div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- twitter -->
+    <script>
+    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+    </script>
+    <!-- facebook -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+        	var js, fjs = d.getElementsByTagName(s)[0];
+        	if (d.getElementById(id)) return;
+        	js = d.createElement(s); js.id = id;
+        	js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+        	fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- はてなブックマーク -->
+    <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async">
+        {lang: "ja"}
+    </script>
+
+
+    <script src="main.js"></script>
+  </body>
+</html>
