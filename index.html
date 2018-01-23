@@ -1,408 +1,181 @@
 <!DOCTYPE html>
-
-<!--
-  Theme: Tumblr Boilerplate
-  by @sanographix
-  http://www.sanographix.net
-  (c) 2014 Showkaku Sano
-  Free to use under the MIT license.
--->
-
 <html lang="ja" prefix="og: http://ogp.me/ns#">
     <head>
-      <meta charset="utf-8">
-      <!-- Variables -->
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>スタークリエイツ｜漫画広告・Ｗeb漫画 札幌の業務用マンガはおまかせ！</title>
+        <meta name="description" content="スタークリエイツは、広告マンガ・Webサイトのランディングページ用マンガ・業務マニュアル用マンガなど、業務用マンガを制作しています。">
 
-      <meta name="text:Google Author" content="" />
-      <meta name="if:Enable Like Button" content="1" />
-      <meta name="if:Enable Tweet Button" content="1" />
-      <meta name="if:Enable Plus1 Button" content="1" />
+        <!-- favicon -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/favicon-16x16.png">
+            <link rel="manifest" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/manifest.json">
+            <link rel="mask-icon" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+            <meta name="theme-color" content="#ffffff">
 
+        <!-- Bootstrap&fontawesome -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
-      <link rel="shortcut icon" href="{Favicon}">
-      <link rel="alternate" type="application/rss+xml" href="{RSS}">
-      <link rel="apple-touch-icon" href="{PortraitURL-128}">
-      <link rel="canonical" href="{Permalink}"/>
+        <!--webfont-->
+            <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
 
-      <!-- Bootstrap -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-      <link rel="stylesheet" type="text/css" media="screen" href="https://sawasawa0.github.io/starcreates_files/style.css" />
-      <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+        <!-- CSS -->
+            <link rel="stylesheet" type="text/css" href="https://sawasawa0.github.io/starcreates_files/css/slick.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="https://sawasawa0.github.io/starcreates_files/css/slick-theme.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 
-      <!-- OGP -->
-      <meta property="og:title" content="{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}" />
-      <meta property="og:type" content="article" />
-      <meta property="og:image" content="{PortraitURL-128}" />
+            <style>{customcss}</style>
 
-      <!-- Twitter tags -->
-      <meta name="twitter:image" content="{PortraitURL-128}" />
-
-       <!-- photo だったら og-image は photoURL にする -->
-      {block:PermalinkPage}
-        {block:Posts}
-          {block:Photo}
-            <meta property="og:image" content="{PhotoURL-HighRes}" />
-          {/block:Photo}
-          {block:Photoset}
-            {block:Photos}
-            <meta property="og:image" content="{PhotoURL-HighRes}" />
-            {/block:Photos}
-          {/block:Photoset}
-        {/block:Posts}
-      {/block:PermalinkPage}
-      <meta property="og:site_name" content="{Title}" />
-      {block:Description}
-        <meta property="og:description" content="{MetaDescription}">
-      {/block:Description}
-      {block:IfGoogleAuthor}
-        <link rel="author" href="{text:Google Author}" />
-      {/block:IfGoogleAuthor}
-      {block:IndexPage}
-        <link rel="canonical" href="{BlogURL}"/>
-        <meta property="og:url" content="{BlogURL}" />
-      {/block:IndexPage}
-      {block:PermalinkPage}
-        <link rel="canonical" href="{Permalink}"/>
-        <meta property="og:url" content="{Permalink}" />
-      {/block:PermalinkPage}
-
-      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-      <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
+            <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
     </head>
+    <body>
+        <div class="ly_container">
+            <header class="ly_header">
+                <div class="ly_logo">
+                    <a href="#" class="js_BackToTop"><img src="https://sawasawa0.github.io/starcreates_files/img/logo_text_01.png"></a>
+                </div>
+                <nav>
+                    <ul class="bl_navbar el_nav_dropdown el_nav el_nav__col8 cf">
+                        <li class="el_nav__pink"><a href="/"><i class="fa fa-home" aria-hidden="true"></i>トップページ</a></li>
+                        <li class="el_nav__orange">
+                            <a href="#"><i class="fa fa-book" aria-hidden="true"></i>スタークリエイツについて</a>
+                        </li>
+                        <li class="el_nav__yellow">
+                            <a href="#"><i class="fa fa-star" aria-hidden="true"></i>業務用マンガ <i class="fa fa-chevron-down el_mobile__hide" aria-hidden="true"></i></a>
+                            <ul class="el_mobile__hide">
+                                <li><a href="#">Webマンガ</a></li>
+                                <li><a href="#">広告マンガ</a></li>
+                                <li><a href="#">事業PRマンガ</a></li>
+                                <li><a href="#">業務マニュアルマンガ</a></li>
+                            </ul>
+                        </li>
+                        <li class="el_nav__greenyellow">
+                            <a href="#"><i class="fa fa-star" aria-hidden="true"></i>制作実績</a>
+                        </li>
+                        <li class="el_nav__mosgreen">
+                            <a href="#"><i class="fa fa-star" aria-hidden="true"></i>ブログ</a>
+                        </li>
+                        <li class="el_nav__green">
+                            <a href="#contact"><i class="fa fa-star" aria-hidden="true"></i>お問い合わせ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-    <body data-spy="scroll" data-target="#navbar" class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink page-{PostID}{/block:PermalinkPage}">
+        <div class="ly_body">
+            <div id="top" class="bl_mainvisual cf">
+                <img style="width:800px;" src="img/mainvisual04.png" alt="">
 
-      <style>
-      {CustomCSS}
-      </style>
-
-      <div id="container">
-    <header class="ly_header">
-          <div class="ly_logo" style="top:0px;">
-              <a href="#" class="js_BackToTop"><img src="https://sawasawa0.github.io/starcreates_files/img/logo_text_01.png"></a>
-          </div>
-          <nav class="navbar-default">
-              <div class="container-fluid">
-                  <div class="navbar-header">
-                      <!-- ハンバーガーボタン -->
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                      </button>
-                  </div>
-                  <!-- メニュー項目 -->
-                  <div id="navbar" class="collapse navbar-collapse">
-                      <ul class="nav navbar-nav">
-                          <li class="active"><a href="#" class="js_BackToTop">top</a></li>
-                          <li><a href="#about" class="js_inPageLink">スタークリエイツについて</a></li>
-                          <li><a href="#work" class="js_inPageLink">制作実績</a></li>
-                          <li><a href="#flow" class="js_inPageLink">制作フロー</a></li>
-                          <li><a href="#charge" class="js_inPageLink">料金</a></li>
-                          <li><a href="#contact" class="js_inPageLink">お問い合わせ</a></li>
-                      </ul>
-                  </div>
-                  <!-- /.navbar-collapse -->
-              </div>
-              <!-- /.container-fluid -->
-          </nav>
-      </header>
-
-      <div class="ly_body">
-          <div id="top" class="bl_mainvisual cf">
-                  <img class="bl_mainvisual_img" src="https://sawasawa0.github.io/starcreates_files/img/mainvisual.png">
-          </div>
-          <!-- SNSボタン　-->
-          <ul class="social-buttons">
-            {block:IfEnableTweetButton}
-            <li class="social-button">
-              <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </li>
-            {/block:IfEnableTweetButton}
-            {block:IfEnableLikeButton}
-            <li class="social-button">
-              <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
-            </li>
-            {/block:IfEnableLikeButton}
-
-            <!-- はてなブックマーク -->
-            <li class="social-button">
-                <a href="http://b.hatena.ne.jp/entry/http://starcreates.me" class="hatena-bookmark-button" data-hatena-bookmark-title="スタークリエイツ｜「IT×マンガ」でビジネスの生産性を向上させます" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
-            </li>
-
-            {block:IfEnablePlus1Button}
-            <li class="social-button">
-              <div class="g-plusone" data-size="medium"></div>
-              <script type="text/javascript">
-                window.___gcfg = {lang: 'ja'};
-
-                (function() {
-                  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                  po.src = 'https://apis.google.com/js/plusone.js';
-                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                })();
-              </script>
-            </li>
-            {/block:IfEnablePlus1Button}
-          </ul>
-
-              <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">Q.</span> こんなことで困っていませんか？</p>
-              <ul class="bl_sect_img cf">
-                  <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
-                  <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
-                  <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x320.png" alt=""></li>
-              </ul>
-              <div class="bl_sect cf">
-                  <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__blue">A.</span> その問題<span class="el_txt__pink">「IT×マンガ」</span>の力で解決します。</p>
-                  <ul class="bl_sect_img  cf">
-                      <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
-                      <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
-                      <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
-                  </ul>
-            </div>
-            <div class="bl_sect cf">
-                <h2 class="bl_sect_ttl">北海道でビジネスを行っているみなさまへ</h2>
-                <p class="bl_sect_txt bl_sect_txt__para">
-                    <span class="el_txt__pink">北海道</span>は、日本全国の中でも<span class="el_txt__pink">少子高齢化</span>の進行が特に早く、<span class="el_txt__pink">労働力の確保</span>に多くの人が悩まされてるのではないでしょうか。<br>
-                    <br>
-                    <span class="el_txt__orange">人手の足りなさをなんとかして補いたい。でも、どうしたら良いかわからない。</span><br>
-                    <br>
-                    そのような悩みを抱えているみなさまへ向けて、システムやマニュアルに、<span class="el_txt__pink">マンガの要素をプラス</span>した、<span class="el_txt__pink">「会社・チームのみんなが、簡単な手順で、短時間で仕事ができる」</span>ようになるためのサービスを提供いたします。<br>
-                    <br>
-                    大規模なシステム開発はできませんが、10万円-50万円程度の規模の案件を中心にお引き受けしております。<br>
-                    <span class="el_txt__pink">札幌市近郊</span>であれば、直接お伺いいたします。お困りのことがあれば、このWebサイト最下部の<a href="#contact" class="js_inPageLink">お問い合わせフォーム</a>からお気軽にご相談ください。
-                </p>
+                <p class="el_txt__large"><span class="el_txt__pink">業務用マンガ</span>なら みんなが「<span class="el_txt__pink">わかる！</span>」</p>
             </div>
 
-            <div id="about" class="bl_sect row cf">
-                <h2 class="bl_sect_ttl">スタークリエイツについて</h2>
-                <p class="bl_sect_txt bl_sect_txt__para col-sm-8">
-                    スタークリエイツは、北海道札幌市を拠点に、「ITとマンガの力でビジネスの生産性を向上する」をテーマに活動を行っています。<br>
-                    代表の梅沢 太一が直接お伺いして、お客様と一緒に仕事をもっと楽に進めるための方策を考え、ご提案いたします。<br>
-                </p>
-                <figure class="col-sm-3">
-                    <div class="el_img__nigaoe">
-                        <img src="img/taichi.png">
-                    </div>
-                    <figcaption class="el_cap">代表：梅沢 太一</figcaption>
-                </figure>
+        <div class="bl_sect cf">
+            <h2 class="bl_sect_ttl">業務用マンガとは？</h2>
+            <p>
+                「自慢の商品が売れなくて困っている！」<br>
+                「自社のサービスの内容が顧客に伝わらない！」<br>
+                「人手不足で困っているが、人が育たない！」<br>
+                このようなお悩みを抱えていませんか？<br>
+            </p>
+            <p>
+                実は、これらはすべて同じ原因を抱えています。<br>
+                それは、「伝えたいことが、相手にわかってもらえない」ということです。
+            </p>
+            <p>
+                あなたのお悩みを解決するのに必要なのは、きっとこういうことなんじゃないか、と想像しています。
+            </p>
+            <p>
+                「競合他社の商品と比べて、自社の商品がどのようにすぐれているのかを、お客様にわかってもらう」<br>
+                「自社のサービスの内容が、お客様の困りごとを、どのように解決できるのかを、お客様にわかってもらう」<br>
+                「今行っている業務の手順や言葉にするのが難しいコツを、従業員にわかってもらう」<br>
+            </p>
+                このように、「みんなにわかってもらう」ことができれば、あなたのビジネス。
+            </p>
+            <p>
+                そんなあなたにおすすめしたいのが、「業務用マンガ」です。<br>
+                マンガには、「人の目を引き、最後まで読んでもらう力」<br>
+                そして、「難しいこともわかりやすく伝える力」があります。
+            </p>
+            <p>
+                このマンガ持つ力は、きっと、あなたのビジネスにおける武器のひとつになります。<br>
+                もし、ご興味をお持ちになられましたら、下記のお問い合わせフォームから、お気軽にお問い合わせください。
+            </p>
+            <h4>追伸</h4>
+            <p>
+            ここまでお読みいただき、誠にありがとうございます。大変恐縮なのですが、まだ私どもの規模が小さく、2018年は先着50社様限定でのご対応とさせて頂いております。
+            業務用マンガにご関心をお持ちでしたら、下記のQRコードより、お急ぎお問い合わせください。
+            </p>
+
+            <a class="el_btn_more" href="#">
+                <button class="el_btn_more"><i class="fa fa-star" aria-hidden="true"></i> 詳細を見る</button>
+            </a>
+
+        </div>
+
+        <div class="bl_sect cf">
+            <h2 class="bl_sect_ttl">業務用マンガ サービス一覧</h2>
+            <p class="bl_sect_txt bl_sect_txt__para">
+            </p>
+
+            <a href="#">
+                <button class=""><i class="fa fa-star" aria-hidden="true"></i> 詳細を見る</button>
+            </a>
+
+        </div>
+
+        <div class="bl_sect cf">
+            <h2 class="bl_sect_ttl">活動実績</h2>
+            <div id="RelatedPost">
+                <ul id="RelatedPost_list" class="bl_postList el_postList__middle"></ul>
             </div>
 
-          <div id="work" class="bl_sect cf">
-              <h2 class="bl_sect_ttl">制作実績</h2>
-              <ul class="bl_sect_img cf">
-                  <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
-                  <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
-                  <li class="bl_sect_img col-sm-4"><img class="img-thumbnail" src="http://placehold.jp/320x180.png" alt=""></li>
-              </ul>
-              <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">こんなお仕事</span>はお任せください</p>
-          </div>
+            <a href="#">
+                <button class="btn  btn-warning btn-block"><i class="fa fa-star" aria-hidden="true"></i> 詳細を見る</button>
+            </a>
 
-          <div id="flow" class="bl_sect cf">
-              <h2 class="bl_sect_ttl">制作フロー</h2>
-              <div>
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#flow_tabs">① マンガ広告の場合</a></li>
-                    <li><a href="#flow_tabs2">② マンガ業務マニュアル制作の場合</a></li>
-                    <li><a href="#flow_tabs3">③ 業務システム開発・web制作の場合</a></li>
-                </ul>
-                <section class="tabs-content">
-                    <section id="flow_tabs">
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 1 お問い合わせ・ご依頼</h3>
-                        	<p class="bl_tabs_txt">スタークリエイツWebサイトのお問い合わせフォームからお受けしております。</p>
+        </div>
 
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 2 事前ヒアリング</h3>
-                        	<p class="bl_tabs_txt">お客様のご依頼内容の確認・ご予算・スケジュール等、大まかな方向性をお伺いいたします。</p>
+        <div id="contact" class="bl_sect cf">
+        <h2 class="bl_sect_ttl">お問い合わせ・お仕事依頼</h2>
+        <p class="bl_sect_txt">お問い合わせ・お仕事依頼は下記のフォームからどうぞ</p>
 
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 3 お見積り</h3>
-                        	<p class="bl_tabs_txt">事前ヒアリングの内容をもとに、お見積りを作成いたします。</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFhJf9HFlaPkXE6W15EzKVE_sDp9qJsTWcMGD95q2zl0SAng/viewform?embedded=true" width="100%" height="1320" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
 
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 4 ご契約</h3>
-                        <p class="bl_tabs_txt">	お見積りの内容でご依頼頂ける場合、ご成約となります。<br>
-                        	※ ご契約成立以降のキャンセルは、その時点の工程までの費用を申し受けます。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 5 お打ち合わせ</h3>
-                        	<p class="bl_tabs_txt">制作物について詳細を詰めていきます。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 6 ラフ作成</h3>
-                        	<p class="bl_tabs_txt">お打ち合わせの内容をもとに、ラフを作成いたします。<br>
-                        	ラフの作成は、最大3回まで実施可能です。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 7 制作</h3>
-                        	<p class="bl_tabs_txt">ご確認いただいたラフを元に、マンガを制作いたします。<br>
-                        	※ 本工程以降の修正については、追加の費用を申し受けます。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 8 納品・ご検収</h3>
-                        	<p class="bl_tabs_txt">最終のご確認を行っていただき、問題なければ、ご指定のファイル形式にて納品いたします。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 9 ご入金</h3>
-                        	<p class="bl_tabs_txt">お支払いは、納品月の月末払いにてお願いいたします。</p>
-                    </section>
-                    <section id="flow_tabs2">
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 1 お問い合わせ・ご依頼</h3>
-                        	<p class="bl_tabs_txt">スタークリエイツWebサイトのお問い合わせフォームからお受けしております。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 2 事前ヒアリング</h3>
-                        	<p class="bl_tabs_txt">お客様のご依頼内容の確認・ご予算・スケジュール・今後の打ち合わせのご体制等、大まかな方向性をお伺いいたします。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 3 お見積り</h3>
-                        	<p class="bl_tabs_txt">事前ヒアリングの内容をもとに、おおまかなお見積りを作成いたします。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 4 ご契約</h3>
-                        	<p class="bl_tabs_txt">お見積りの内容でご依頼頂ける場合、ご成約となります。<br>
-                        	※ 30万円以上の案件の場合、着手金として、制作費の50%のお支払いをお願いいたします。<br>
-                        	※ ご契約成立以降のキャンセルは、その時点の工程までの費用を申し受けます。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 5 お打ち合わせ_業務分析</h3>
-                        	<p class="bl_tabs_txt">制作するマニュアルについて、まずは業務の分析を行います。<br>
-                        	ご依頼の案件に応じて、複数回の打ち合わせを行います。<br>
-                        	お客様と一緒に実際に行っている業務を図表にまとめます。<br>
-                        	（既存のマニュアルを元に制作する場合等、この工程を実施しない場合もあります。）</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 6 お打ち合わせ_マニュアル作成</h3>
-                        	<p class="bl_tabs_txt">業務分析の結果に基いて、マニュアル制作のための打ち合わせを行います。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 7 ラフ作成</h3>
-                        	<p class="bl_tabs_txt">お打ち合わせの内容をもとに、ラフを作成いたします。
-                        	ラフの作成は、最大3回まで実施可能です。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 8 制作</h3>
-                        	<p class="bl_tabs_txt">ご確認いただいたラフを元に、マンガマニュアルを制作いたします。<br>
-                        	※ 本工程以降の修正については、追加の費用を申し受けます。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 9 納品・ご検収</h3>
-                        	<p class="bl_tabs_txt">最終のご確認を行っていただき、問題なければ、ご指定のファイル形式にて納品いたします。<br>
-                        	※ 当方での印刷は行っておりません。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 10 ご入金</h3>
-                        	<p class="bl_tabs_txt">お支払いは、納品月の月末払いにてお願いいたします。</p>
-                    </section>
-                    <section id="flow_tabs3">
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 1 お問い合わせ・ご依頼</h3>
-                        <p class="bl_tabs_txt">スタークリエイツWebサイトのお問い合わせフォームからお受けしております。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 2 事前ヒアリング</h3>
-                        <p class="bl_tabs_txt">お客様のご依頼内容の確認・ご予算・スケジュール・今後の打ち合わせのご体制等、大まかな方向性をお伺いいたします。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 3 お見積り</h3>
-                        <p class="bl_tabs_txt">事前ヒアリングの内容をもとに、おおまかなお見積りを作成いたします。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 4 ご契約</h3>
-                        <p class="bl_tabs_txt">お見積りの内容でご依頼頂ける場合、ご成約となります。<br>
-                        ※ 30万円以上の案件の場合、着手金として、制作費の50%のお支払いをお願いいたします。<br>
-                        ※ ご契約成立以降のキャンセルは、その時点の工程までの費用を申し受けます。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 5 お打ち合わせ_要件定義</h3>
-                        <p class="bl_tabs_txt">制作物について詳細を詰めていきます。<br>
-                        ご依頼の案件に応じて、複数回の打ち合わせを行います。<br>
-                        お客様と一緒に業務フロー等を制作する場合もあります。</p>
+        </div>
+        <!-- トップに戻るボタン -->
+        </div>
 
 
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 6 要件定義書作成</h3>
-                        <p class="bl_tabs_txt">お打ち合わせの内容をもとに、要件定義書を作成いたします。<br>
-                        要件定義書と一緒に画面のイメージも制作しますので、<br>
-                        制作したいシステムとの間に齟齬がないかご確認をお願いいたします。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 7 制作</h3>
-                        <p class="bl_tabs_txt">ご確認いただいた要件定義書を元に、システム・webページを制作いたします。<br>
-                        ※ 本工程以降の修正については、追加の費用を申し受けます。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 8 納品準備（お客様作業）</h3>
-                        <p class="bl_tabs_txt">案件の内容に応じて、サーバーの用意やドメインの取得等をお願いいたします。<br>
-                        ※ 上記について、お客様の口座情報等が必要となる場合がありますので、代行することはできません。<br>
-                        　 部分的なお手伝いは、有償ですが行っております。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 9 仮納品・ユーザーテスト（お客様作業）</h3>
-                        <p class="bl_tabs_txt">制作工程を完了したシステムを仮納品いたします。<br>
-                        ご検収前に、実際にお客様が期待していた動作をするかご確認ください。<br>
-                        ※ ユーザーテストのお手伝いは、有償ですが行っております。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 10 納品・ご検収</h3>
-                        <p class="bl_tabs_txt">最終のご確認を行っていただき、問題なければ、事前の打ち合わせ内容に応じた形で納品いたします。</p>
-
-                        <h3 class="bl_tabs_ttl"><span class="glyphicon glyphicon-pencil"></span> 11 ご入金</h3>
-                        <p class="bl_tabs_txt">お支払いは、納品月の月末払いにてお願いいたします。</p>
-                    </section>
-                </section>
-              </div>
-          </div>
-          <div id="charge" class="bl_sect cf">
-              <h2 class="bl_sect_ttl">料金（料金表から一部抜粋）</h2>
-              <table class="table table-bordered bl_sect_table">
-                  <thead class="bl_sect_thead">
-                      <th class="bl_sect_th">業務システム開発</th>
-                      <th class="bl_sect_th">webページ制作</th>
-                      <th class="bl_sect_th">マニュアル制作</th>
-                      <th class="bl_sect_th">マンガ・イラスト制作</th>
-                  </thead>
-                  <tbody class="bl_sect_tbody">
-                      <tr class="bl_sect_tr">
-                          <td class="bl_sect_td"></td>
-                          <td class="bl_sect_td"></td>
-                          <td class="bl_sect_td"></td>
-                          <td class="bl_sect_td"></td>
-                      </tr>
-                      <tr class="bl_sect_tr">
-                          <td class="bl_sect_td"></td>
-                          <td class="bl_sect_td"></td>
-                          <td class="bl_sect_td"></td>
-                          <td class="bl_sect_td"></td>
-                      </tr>
-                      <tr class="bl_sect_tr">
-                          <td class="bl_sect_td"></td>
-                          <td class="bl_sect_td"></td>
-                          <td class="bl_sect_td"></td>
-                          <td class="bl_sect_td"></td>
-                      </tr>
-                  </tbody>
-              </table>
-              <p class="bl_sect_txt bl_sect_txt__lrg"><span class="el_txt__pink">明朗会計</span>で安心してご利用いただけます。</p>
-              <p class="bl_sect_txt">詳細はこちらから</p>
-          </div>
-          <div id="contact" class="bl_sect cf">
-              <h2 class="bl_sect_ttl">お問い合わせ・お仕事依頼</h2>
-              <p class="bl_sect_txt">お問い合わせ・お仕事依頼は下記のフォームからどうぞ</p>
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFhJf9HFlaPkXE6W15EzKVE_sDp9qJsTWcMGD95q2zl0SAng/viewform?embedded=true" width="100%" height="1320" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
-          </div>
-          <!-- トップに戻るボタン -->
-          <a href="#" class="bl_btn_BackToTop js_BackToTop">∧</a>
-
-      </div>
-
+        </div>
         <footer class="ly_footer">
+                <nav class="bl_link_footer">
+                    <div>
+                        <ul>
+                            <li><a href="">サイトマップ</a></li>
+                            <li><a href="">スタークリエイツについて</a></li>
+                            <li><a href="">サービス内容（事業案内）</a></li>
+                            <li><a href="">プライバシーポリシー</a></li>
+                            <li><a href="">特定商取引法に基づく表記</a></li>
+                            <li><a href="">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </nav>
             <div class="bl_copy"><p>&copy; {CopyrightYears} StarCreates</p></div>
         </footer>
-      </div>
+        <div class="bl_btn_BackToTop js_BackToTop"><a href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></div>
 
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-      {block:IfEnableLikeButton}
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-      {/block:IfEnableLikeButton}
-      <!-- はてなブックマーク -->
-      <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async">
-          {lang: "ja"}
-      </script>
-      <script src="main.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://sawasawa0.github.io/starcreates_files/js/slick.min.js"></script>
+        <script src="https://sawasawa0.github.io/starcreates_files/js/main.js"></script>
 
     </body>
 </html>

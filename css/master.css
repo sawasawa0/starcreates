@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.ly_container{
+    background-color: red;
+    min-height: 100px;
+}
+.ly_header{
+    background-color: green;
+    min-height: 100px;
+}
+.ly_body{
+    background-color: blue;
+    min-height: 100px;
+}
+.ly_main{
+    background-color: yellow;
+    min-height: 100px;
+    width: 97%;
+    margin: 20px;
+    box-sizing: border-box;
+}
+.ly_main_content{
+    background-color: orange;
+    min-height: 100px;
+    box-sizing: border-box;
+}
+.ly_aside{
+    background-color: pink;
+    min-height: 100px;
+}
+.ly_aside_content{
+    background-color: skyblue;
+    min-height: 100px;
+}
+.ly_footer{
+    background-color: purple;
+    min-height: 100px;
+}
